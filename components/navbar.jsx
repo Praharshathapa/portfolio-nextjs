@@ -42,22 +42,22 @@ function NavBar() {
                                 }`}
                         >
                             <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-                                <li className="pb-7 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-cyan-900  border-cyan-600   md:hover:text-purple-600 md:hover:bg-transparent">
+                                <li className="pb-7 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-cyan-900  border-cyan-600   md:hover:text-cyan-600 md:hover:bg-transparent">
                                     <Link href="#about" onClick={() => setNavbar(!navbar)}>
                                         About
                                     </Link>
                                 </li>
-                                <li className="pb-7 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-cyan-600  border-cyan-600  md:hover:text-purple-600 md:hover:bg-transparent">
+                                <li className="pb-7 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-cyan-600  border-cyan-600  md:hover:text-cyan-600 md:hover:bg-transparent">
                                     <Link href="#blog" onClick={() => setNavbar(!navbar)}>
                                         Blogs
                                     </Link>
                                 </li>
-                                <li className="pb-7 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-cyan-600  border-cyan-600   md:hover:text-purple-600 md:hover:bg-transparent">
+                                <li className="pb-7 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-cyan-600  border-cyan-600   md:hover:text-cyan-600 md:hover:bg-transparent">
                                     <Link href="#contact" onClick={() => setNavbar(!navbar)}>
                                         Contact
                                     </Link>
                                 </li>
-                                <li className="pb-7 text-xl text-white py-2 px-10 text-center  border-b-2 md:border-b-0  hover:bg-cyan-600  border-cyan-600   md:hover:text-purple-600 md:hover:bg-transparent">
+                                <li className="pb-7 text-xl text-white py-2 px-10 text-center  border-b-2 md:border-b-0  hover:bg-cyan-600  border-cyan-600   md:hover:text-cyan-600 md:hover:bg-transparent">
                                     <Link href="#projects" onClick={() => setNavbar(!navbar)}>
                                         Projects
                                     </Link>

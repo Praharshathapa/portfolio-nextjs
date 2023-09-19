@@ -1,12 +1,14 @@
 "use client"
 
-import NavBar from '@/components/navbar';
+import NavBar from '@/components/NavBar.jsx';
 import Image from 'next/image'
-
+import RenderList from '@/components/socialicon';
 export default function Home() {
   return (
     <div>
+
       <NavBar />
+
       <section
         id="about"
         className="text-white h-screen bg-black  text-center flex"
@@ -36,6 +38,7 @@ export default function Home() {
           Projects
         </h1>
       </section>
+
     </div>
   );
 }

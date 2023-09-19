@@ -15,7 +15,7 @@ function NavBar() {
                         <div className="flex items-center justify-between py-3 md:py-5 md:block">
 
                             <Link href="/">
-                                <h2 className="text-l text-cyan-600 font-bold ">~/dev-Praharsha</h2>
+                                <h2 className="    text-xl text-cyan-500 font-bold ">~/dev-Praharsha</h2>
                             </Link>
                             {/* HAMBURGER BUTTON FOR MOBILE */}
                             <div className="md:hidden">
@@ -39,27 +39,27 @@ function NavBar() {
                     </div>
                     <div>
                         <div
-                            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? 'p-12 md:p-0 block' : 'hidden'
+                            className={`flex-1 justify-self-center pb-2 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? 'p-12 md:p-0 block' : 'hidden'
                                 }`}
                         >
 
                             <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-                                <li className="pb-7 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-cyan-900  border-cyan-600   md:hover:text-cyan-600 md:hover:bg-transparent">
+                                <li className="pb-2 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-cyan-900  border-cyan-600   md:hover:text-cyan-600 md:hover:bg-transparent">
                                     <Link href="#about" onClick={() => setNavbar(!navbar)}>
                                         About
                                     </Link>
                                 </li>
-                                <li className="pb-7 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-cyan-600  border-cyan-600  md:hover:text-cyan-600 md:hover:bg-transparent">
+                                <li className="pb-2 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-cyan-600  border-cyan-600  md:hover:text-cyan-600 md:hover:bg-transparent">
                                     <Link href="#blog" onClick={() => setNavbar(!navbar)}>
                                         Blogs
                                     </Link>
                                 </li>
-                                <li className="pb-7 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-cyan-600  border-cyan-600   md:hover:text-cyan-600 md:hover:bg-transparent">
+                                <li className="pb-2 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-cyan-600  border-cyan-600   md:hover:text-cyan-600 md:hover:bg-transparent">
                                     <Link href="#contact" onClick={() => setNavbar(!navbar)}>
                                         Contact
                                     </Link>
                                 </li>
-                                <li className="pb-7 text-xl text-white py-2 px-10 text-center  border-b-2 md:border-b-0  hover:bg-cyan-600  border-cyan-600   md:hover:text-cyan-600 md:hover:bg-transparent">
+                                <li className="pb-2 text-xl text-white py-2 px-10 text-center  border-b-2 md:border-b-0  hover:bg-cyan-600  border-cyan-600   md:hover:text-cyan-600 md:hover:bg-transparent">
                                     <Link href="#projects" onClick={() => setNavbar(!navbar)}>
                                         Projects
                                     </Link>

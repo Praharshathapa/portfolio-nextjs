@@ -3,11 +3,13 @@
 import NavBar from '@/components/NavBar.jsx';
 import Image from 'next/image'
 import RenderList from '@/components/socialicon';
+
 export default function Home() {
   return (
     <div>
 
       <NavBar />
+
 
       <section
         id="about"
@@ -38,6 +40,7 @@ export default function Home() {
           Projects
         </h1>
       </section>
+      <RenderList className=""></RenderList>
 
     </div>
   );

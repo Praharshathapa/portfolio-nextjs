@@ -1,25 +1,25 @@
 import React from "react";
-import { Instagram } from "react-feather";
-import { Linkedin } from "react-feather";
-import { GitHub } from "react-feather";
-import { Twitter } from "react-feather";
+import { Instagram, Linkedin, GitHub, Twitter } from "react-feather";
 
-const RenderList = props => {
-    const animals = [
-        <Instagram />,
-        <Linkedin />,
-        <GitHub />,
-        <Twitter />
-
-    ];
-
+const RenderList = (props) => {
     return (
-        <ul>
-            {animals.map(item => (
-                <li key={item.id}>{item.animal}</li>
-            ))}
-        </ul>
+        <div className="fixed fixed top-1/2 left-4 transform -translate-y-1/2  p-1 rounded shadow-md z-50">
+            <ul>
+                <li className="mb-5">
+                    <Instagram className="w-6 h-6" />
+                </li>
+                <li className="mb-5">
+                    <Linkedin className="w-6 h-6" />
+                </li>
+                <li className="mb-5">
+                    <GitHub className="w-6 h-6" />
+                </li>
+                <li>
+                    <Twitter className="w-6 h-6" />
+                </li>
+            </ul>
+        </div>
     );
 };
 
-export default RenderList
+export default RenderList;

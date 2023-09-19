@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import RenderList from "./socialicon.jsx";
 import { Menu, X } from "react-feather";
 
 function NavBar() {
@@ -9,14 +8,14 @@ function NavBar() {
 
     return (
         <div>
-            <RenderList />
+
             <nav className="w-full bg-black fixed top-0 left-0 right-0 z-10">
                 <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                     <div>
                         <div className="flex items-center justify-between py-3 md:py-5 md:block">
 
                             <Link href="/">
-                                <h2 className="text-2xl text-cyan-600 font-bold ">Praharsha Thapa</h2>
+                                <h2 className="text-l text-cyan-600 font-bold ">~/dev-Praharsha</h2>
                             </Link>
                             {/* HAMBURGER BUTTON FOR MOBILE */}
                             <div className="md:hidden">

@@ -8,7 +8,7 @@ function NavBar() {
     const [navbar, setNavbar] = useState(false);
 
     return (
-        <div>
+        <div className='custom-cursor'>
             <nav className="w-full bg-black fixed top-0 left-0 right-0 z-10">
                 <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                     <div>
@@ -33,7 +33,7 @@ function NavBar() {
                     </div>
                     <div>
                         <div
-                            className={`flex-1 justify-self-center pb-2 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "p-12 md:p-0 block" : "hidden"
+                            className={`custom-cursor flex-1 justify-self-center pb-2 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "p-12 md:p-0 block" : "hidden"
                                 }`}
                         >
                             <ul className="h-screen md:h-auto items-center justify-center md:flex">

@@ -5,10 +5,9 @@ import Image from 'next/image'
 import RenderList from '@/components/socialicon';
 
 
-
 export default function Home() {
   return (
-    <div>
+    <div className='custom-cursor'>
 
       <NavBar />
 

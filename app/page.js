@@ -16,33 +16,32 @@ export default function Home() {
 
       <RenderList />
       <section
-        id="about"
-        className="text-white h-screen bg-black  text-center flex"
-      >
-        <h1 className="m-auto text-cyan-600 ">
+        id="hi"
+        className="h-screen bg-black  text-center flex ">
+        <h1 className="m-auto text-cyan-600 grid grid-cols-2 gap-3">
           <Education />
           <Skills />
         </h1>
       </section>
-      <section id="blog" className=" text-white h-screen bg-cyan-600 flex">
+      <section id="Projects" className=" text-white h-screen bg-cyan-600 flex">
         <h1 className="m-auto font-waterfall text-9xl text-black font-bold">
-          Blog
+          Projects
         </h1>
       </section>
       <section
-        id="contact"
+        id="Hobby"
         className="text-white h-screen bg-black  text-center flex"
       >
         <h1 className="m-auto font-waterfall text-9xl text-cyan-600 font-bold">
-          Contact{' '}
+          Hobby
         </h1>
       </section>
       <section
-        id="projects"
+        id="Contacts"
         className=" text-white h-screen bg-cyan-700 flex"
       >
         <h1 className="m-auto font-waterfall text-9xl text-black font-bold">
-          Projects
+          Contacts
         </h1>
       </section>
 

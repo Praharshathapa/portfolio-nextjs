@@ -28,7 +28,7 @@ const RenderList = (props) => {
     }
 
     return (
-        <div className=" fixed top-1/2 left-4 transform -translate-y-1/2 p-1  z-50">
+        <div className=" fixed top-1/2 right-4 transform -translate-y-1/2 p-1  z-50">
             <ul>
                 {!isSmallScreen &&
                     socialMediaLinks.map((link, index) => (

@@ -42,18 +42,18 @@ function NavBar() {
                                     </Link>
                                 </li>
                                 <li className="pb-2 text-xl text-white py-2 px-6 text-center border-b-2 md:border-b-0 hover:bg-cyan-600 border-cyan-600 md:hover:text-cyan-600 md:hover:bg-transparent">
-                                    <Link href="#blog" onClick={() => setNavbar(!navbar)}>
-                                        Blogs
+                                    <Link href="#Projetcs" onClick={() => setNavbar(!navbar)}>
+                                        Projects
                                     </Link>
                                 </li>
                                 <li className="pb-2 text-xl text-white py-2 px-6 text-center border-b-2 md:border-b-0 hover:bg-cyan-600 border-cyan-600 md:hover:text-cyan-600 md:hover:bg-transparent">
-                                    <Link href="#contact" onClick={() => setNavbar(!navbar)}>
-                                        Contact
+                                    <Link href="#Hobbies" onClick={() => setNavbar(!navbar)}>
+                                        Hobbies
                                     </Link>
                                 </li>
                                 <li className="pb-2 text-xl text-white py-2 px-10 text-center border-b-2 md:border-b-0 hover:bg-cyan-600 border-cyan-600 md:hover:text-cyan-600 md:hover:bg-transparent">
-                                    <Link href="#projects" onClick={() => setNavbar(!navbar)}>
-                                        Projects
+                                    <Link href="#Contact" onClick={() => setNavbar(!navbar)}>
+                                        Contact
                                     </Link>
                                 </li>
                             </ul>

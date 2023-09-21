@@ -1,0 +1,32 @@
+.timeline-container {
+    padding: 20px;
+    background-color: #000;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.timeline-item-content {
+    background-color: #007acc;
+    border: 2px solid #007acc;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1;
+}
+
+.timeline-item h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.timeline-item p {
+    font-size: 1rem;
+    color: #ccc;
+}

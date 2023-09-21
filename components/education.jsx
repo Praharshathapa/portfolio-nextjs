@@ -1,4 +1,5 @@
 import React from 'react';
+import './education.css';
 
 const Education = () => {
     const educationItems = [
@@ -15,17 +16,17 @@ const Education = () => {
     ];
 
     return (
-        <div className=" p-4 rounded shadow-md">
+        <div className="timeline-container">
             <h2 className="text-3xl font-bold mb-4">Education</h2>
-            <ul>
-                {educationItems.map((item, index) => (
-                    <li key={index} className="mb-2">
-                        <h3 className="text-lg ">{item.institution}</h3>
+            {educationItems.map((item, index) => (
+                <li key={index} className="timeline-item">
+                    <div className="timeline-item-content">
+                        <h3 className="text-lg">{item.institution}</h3>
                         <p className="text-gray-400 text-s">{item.degree}</p>
                         <p className="text-gray-400">{item.year}</p>
-                    </li>
-                ))}
-            </ul>
+                    </div>
+                </li>
+            ))}
         </div>
     );
 };

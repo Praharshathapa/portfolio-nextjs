@@ -1,57 +1,58 @@
-"use client";
-
+"use client"
+import React from 'react';
 import NavBar from '@/components/NavBar.jsx';
 import Image from 'next/image';
 import RenderList from '@/components/socialicon';
 import Education from '@/components/education';
 import Skills from '@/components/skills';
+import profile from '../app/profile.jpg';
+
+
+
+
 
 export default function Home() {
   return (
-    <div className='custom-cursor z-10'>
-      <NavBar />
-      <RenderList />
-      <section id="hi" className="h-screen bg-black text-white text-center flex flex-col justify-center relative">
-        <div className="mb-8">
-          <div className="relative w-32 h-32 mx-auto rounded-full overflow-hidden shadow-lg z-5">
+    <div className='custom-cursor relative z-10 '>
+      <div className="bg-black text-white min-h-screen">
+        <NavBar />
+        <RenderList />
+        <section id="hi" className="h-screen flex flex-col justify-center items-center">
+          <div className="relative mx-auto mb-6 w-60 h-60 overflow-hidden shadow-lg">
             <Image
-              src="/profile.jpg"
+              src={profile}
               alt="Profile Picture"
-              layout="fill"
               objectFit="cover"
+              layout="fill"
+              className="rounded-custom-shape"
             />
           </div>
-          <h1 className="text-4xl font-bold mb-4 ">Hi! I am Praharsha Thapa</h1>
-          <div className="w-20 h-1 bg-cyan-600 mx-auto rounded-full mb-6 animate-bounce "></div>
-          <p className="text-lg text-cyan-600 font-semibold ">
+          <h1 className="text-4xl font-bold mb-2">Hi! I am Praharsha Thapa</h1>
+          <div className="w-20 h-1 bg-cyan-600 rounded-full mb-4"></div>
+          <p className="text-xl font-semibold">
             Welcome to my portfolio
           </p>
-        </div>
+        </section>
 
-        <div className="grid grid-cols-2 gap-4 mt-6 z-10">
-          <div>
+        <div className="flex flex-col md:flex-row mx-auto mt-12 max-w-screen-xl">
+          <div className="md:w-1/2 p-4">
             <Education />
           </div>
-          <div>
+          <div className="md:w-1/2 p-4">
             <Skills />
           </div>
         </div>
-      </section>
-      <section id="Projects" className="text-white h-screen bg-cyan-600 flex">
-        <h1 className="m-auto font-waterfall text-9xl text-black font-bold">
-          Projects
-        </h1>
-      </section>
-      <section id="Hobby" className="text-white h-screen bg-black text-center flex">
-        <h1 className="m-auto font-waterfall text-9xl text-cyan-600 font-bold">
-          Hobby
-        </h1>
-      </section>
-      <section id="Contacts" className="text-white h-screen bg-cyan-700 flex">
-        <h1 className="m-auto font-waterfall text-9xl text-black font-bold">
-          Contacts
-        </h1>
-      </section>
+
+        <section id="Projects" className="text-white h-screen bg-cyan-600 flex justify-center items-center">
+          <h1 className="text-6xl font-bold">Projects</h1>
+        </section>
+        <section id="Hobby" className="text-white h-screen bg-black text-center flex justify-center items-center">
+          <h1 className="text-6xl font-bold text-cyan-600">Hobby</h1>
+        </section>
+        <section id="Contacts" className="text-white h-screen bg-cyan-700 flex justify-center items-center">
+          <h1 className="text-6xl font-bold">Contacts</h1>
+        </section>
+      </div>
     </div>
   );
 }

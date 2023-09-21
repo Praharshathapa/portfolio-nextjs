@@ -6,10 +6,8 @@ import RenderList from '@/components/socialicon';
 import Education from '@/components/education';
 import Skills from '@/components/skills';
 import profile from '../app/profile.jpg';
-
-
-
-
+import ProjectList from '@/components/Projects';
+import ContactForm from '@/components/Contactform';
 
 export default function Home() {
   return (
@@ -18,13 +16,13 @@ export default function Home() {
         <NavBar />
         <RenderList />
         <section id="hi" className="h-screen flex flex-col justify-center items-center">
-          <div className="relative mx-auto mb-6 w-60 h-60 overflow-hidden shadow-lg">
+          <div className="relative mx-auto mb-6 w-60 h-60 overflow-hidden rounded-full border-4 border-cyan-600 shadow-lg">
             <Image
               src={profile}
               alt="Profile Picture"
               objectFit="cover"
               layout="fill"
-              className="rounded-custom-shape"
+              className="rounded-full"
             />
           </div>
           <h1 className="text-4xl font-bold mb-2">Hi! I am Praharsha Thapa</h1>
@@ -44,13 +42,13 @@ export default function Home() {
         </div>
 
         <section id="Projects" className="text-white h-screen bg-cyan-600 flex justify-center items-center">
-          <h1 className="text-6xl font-bold">Projects</h1>
+          <ProjectList />
         </section>
         <section id="Hobby" className="text-white h-screen bg-black text-center flex justify-center items-center">
           <h1 className="text-6xl font-bold text-cyan-600">Hobby</h1>
         </section>
         <section id="Contacts" className="text-white h-screen bg-cyan-700 flex justify-center items-center">
-          <h1 className="text-6xl font-bold">Contacts</h1>
+          <ContactForm />
         </section>
       </div>
     </div>

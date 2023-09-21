@@ -37,22 +37,22 @@ function NavBar() {
                         >
                             <ul className="h-screen md:h-auto items-center justify-center md:flex">
                                 <li className="pb-2 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-cyan-900 border-cyan-600 md:hover:text-cyan-600 md:hover:bg-transparent">
-                                    <Link href="#about" onClick={() => setNavbar(!navbar)}>
+                                    <Link href="#hi" onClick={() => setNavbar(!navbar)}>
                                         About
                                     </Link>
                                 </li>
                                 <li className="pb-2 text-xl text-white py-2 px-6 text-center border-b-2 md:border-b-0 hover:bg-cyan-600 border-cyan-600 md:hover:text-cyan-600 md:hover:bg-transparent">
-                                    <Link href="#Projetcs" onClick={() => setNavbar(!navbar)}>
+                                    <Link href="#Projects" onClick={() => setNavbar(!navbar)}>
                                         Projects
                                     </Link>
                                 </li>
                                 <li className="pb-2 text-xl text-white py-2 px-6 text-center border-b-2 md:border-b-0 hover:bg-cyan-600 border-cyan-600 md:hover:text-cyan-600 md:hover:bg-transparent">
-                                    <Link href="#Hobbies" onClick={() => setNavbar(!navbar)}>
+                                    <Link href="#Hobby" onClick={() => setNavbar(!navbar)}>
                                         Hobbies
                                     </Link>
                                 </li>
                                 <li className="pb-2 text-xl text-white py-2 px-10 text-center border-b-2 md:border-b-0 hover:bg-cyan-600 border-cyan-600 md:hover:text-cyan-600 md:hover:bg-transparent">
-                                    <Link href="#Contact" onClick={() => setNavbar(!navbar)}>
+                                    <Link href="#Contacts" onClick={() => setNavbar(!navbar)}>
                                         Contact
                                     </Link>
                                 </li>

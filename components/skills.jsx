@@ -1,10 +1,16 @@
 import React from 'react';
 
 const Skills = () => {
-    const skillsList = ["HTML", "CSS", "JavaScript", "React", "Node.js", "Figma", "Python", "Data Science:Extraction,Collection,Visualiazation,Manipulation"];
+    const skillsList = [
+        "HTML, CSS, JavaScript",
+        "React, Node.js, Figma",
+        "Python, C, C+",
+        "Database Management (SQL, NoSQL)",
+        "Data Visualization (Matplotlib, Seaborn)",
+    ];
 
     return (
-        <div className=" p-4 rounded shadow-md">
+        <div className="p-4 rounded shadow-md">
             <h2 className="text-3xl font-bold mb-4">Skills</h2>
             <ul className="columns-1 text-s">
                 {skillsList.map((skill, index) => (

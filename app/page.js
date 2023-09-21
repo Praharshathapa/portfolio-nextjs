@@ -8,6 +8,7 @@ import Skills from '@/components/skills';
 import profile from '../app/profile.jpg';
 import ProjectList from '@/components/Projects';
 import ContactForm from '@/components/Contactform';
+import "./page.css"
 
 export default function Home() {
   return (
@@ -16,20 +17,20 @@ export default function Home() {
         <NavBar />
         <RenderList />
         <section id="hi" className="h-screen flex flex-col justify-center items-center">
-          <div className="relative mx-auto mb-6 w-60 h-60 overflow-hidden rounded-full border-4 border-cyan-600 shadow-lg">
+          <div className="profile-picture-container relative mx-auto mb-6 w-60 h-60 overflow-hidden shadow-lg">
             <Image
               src={profile}
               alt="Profile Picture"
               objectFit="cover"
               layout="fill"
-              className="rounded-full"
+              className="profile-picture rounded-custom-shape"
             />
           </div>
-          <h1 className="text-4xl font-bold mb-2">Hi! I am Praharsha Thapa</h1>
-          <div className="w-20 h-1 bg-cyan-600 rounded-full mb-4"></div>
-          <p className="text-xl font-semibold">
-            Welcome to my portfolio
-          </p>
+          <div className="text-container relative">
+            <h1 className="text-4xl font-bold mb-2 glow-text">Hi! I am Praharsha Thapa</h1>
+            <div className="w-20 h-1 bg-cyan-600 rounded-full mb-4"></div>
+            <p className="text-xl font-semibold">Welcome to my portfolio</p>
+          </div>
         </section>
 
         <div className="flex flex-col md:flex-row mx-auto mt-12 max-w-screen-xl">

@@ -19,12 +19,8 @@
         text-shadow: -5px 0 #f44336, 5px -4px #2196f3;
     }
 
-    /* You can add any other styles you want */
 }
 
-/* Apply the animation to the icon-container on hover */
 .icon-container:hover {
     animation: textShadowAnimation 2s infinite;
 }
-
-/* You can add other styles for the icon-container here */

@@ -3,15 +3,3 @@
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
-
-.rounded-custom-shape {
-
-    clip-path: polygon(25% 00%, 100% 0%, 80% 100%, 5% 100%);
-    border-radius: 10px;
-    transition: transform 0.2s ease-in-out;
-
-}
-
-.rounded-custom-shape:hover {
-    transform: scale(1.05);
-}

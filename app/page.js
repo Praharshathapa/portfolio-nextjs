@@ -9,15 +9,22 @@ import profile from '../app/profile.jpg';
 import ProjectList from '@/components/Projects';
 import ContactForm from '@/components/Contactform';
 import "./page.css"
+import BackgroundAnimation from '../components/background/animat';
+
+
+
 
 export default function Home() {
   return (
     <div className='custom-cursor relative z-10 '>
-      <div className="bg-black text-white min-h-screen">
+      <div className="text-white min-h-screen">
         <NavBar />
         <RenderList />
-        <section id="hi" className="h-screen flex flex-col justify-center items-center">
-          <div className="profile-picture-container relative mx-auto mb-6 w-60 h-60 overflow-hidden shadow-lg">
+        <section id="hi" className="h-screen flex justify-center items-center z-10">
+          <BackgroundAnimation />
+
+          <div className="profile-picture-container relative ml-4 w-60 h-60 overflow-hidden shadow-lg">
+
             <Image
               src={profile}
               alt="Profile Picture"
@@ -26,14 +33,18 @@ export default function Home() {
               className="profile-picture rounded-custom-shape"
             />
           </div>
-          <div className="text-container relative">
+          <div className="text-container relative ml-4">
             <h1 className="text-4xl font-bold mb-2 glow-text">Hi! I am Praharsha Thapa</h1>
             <div className="w-20 h-1 bg-cyan-600 rounded-full mb-4"></div>
             <p className="text-xl font-semibold">Welcome to my portfolio</p>
           </div>
         </section>
 
-        <div className="flex flex-col md:flex-row mx-auto mt-12 max-w-screen-xl">
+
+
+
+
+        <div className="flex flex-col  mx-auto mr -10 md:flex-row  mt-10 max-w-screen-xl">
           <div className="md:w-1/2 p-4">
             <Education />
           </div>

@@ -1,6 +1,5 @@
 import './globals.css'
 import './cursor.css'
-import "./icon.css"
 import { Inter } from 'next/font/google'
 
 

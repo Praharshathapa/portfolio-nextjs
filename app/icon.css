@@ -18,9 +18,16 @@
     100% {
         text-shadow: -5px 0 #f44336, 5px -4px #2196f3;
     }
-
 }
 
-.icon-container:hover {
+.icon {
+    font-size: 24px;
+    color: #fff;
+}
+
+.icon:hover {
     animation: textShadowAnimation 2s infinite;
+    cursor: pointer;
+
+
 }

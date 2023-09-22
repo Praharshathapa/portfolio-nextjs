@@ -3,28 +3,24 @@ import React from 'react';
 import NavBar from '@/components/NavBar.jsx';
 import Image from 'next/image';
 import RenderList from '@/components/socialicon';
-import Education from '@/components/education';
-import Skills from '@/components/skills';
+import Education from '@/components/education/education';
+import Skills from '@/components/skills/skills';
 import profile from '../app/profile.jpg';
-import ProjectList from '@/components/Projects';
-import ContactForm from '@/components/Contactform';
+import ProjectList from '@/components/projects/Projects';
+import ContactForm from '@/components/contactinfo/Contactform';
 import "./page.css"
 import BackgroundAnimation from '../components/background/animat';
 
-
-
-
 export default function Home() {
   return (
-    <div className='custom-cursor relative z-10 '>
-      <div className="text-white min-h-screen">
+    <div className='custom-cursor relative z-5'>
+      <div className="min-h-screen">
         <NavBar />
         <RenderList />
-        <section id="hi" className="h-screen flex justify-center items-center z-10">
+        <section id="hi" className="h-screen flex justify-center items-center z-1">
           <BackgroundAnimation />
 
           <div className="profile-picture-container relative ml-4 w-60 h-60 overflow-hidden shadow-lg">
-
             <Image
               src={profile}
               alt="Profile Picture"
@@ -40,11 +36,7 @@ export default function Home() {
           </div>
         </section>
 
-
-
-
-
-        <div className="flex flex-col  mx-auto mr -10 md:flex-row  mt-10 max-w-screen-xl">
+        <div className="flex flex-col mx-auto mr-10 md:flex-row mt-10 max-w-screen-xl">
           <div className="md:w-1/2 p-4">
             <Education />
           </div>
@@ -66,3 +58,4 @@ export default function Home() {
     </div>
   );
 }
+

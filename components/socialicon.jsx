@@ -1,6 +1,7 @@
+
 import React, { useState, useEffect } from "react";
 import { Instagram, Linkedin, GitHub, Twitter } from "react-feather";
-import { motion } from "framer-motion";
+import '../app/icon.css';
 
 const socialMediaLinks = [
     { name: "Instagram", icon: <Instagram />, url: "https://www.instagram.com/your_username" },
@@ -9,7 +10,7 @@ const socialMediaLinks = [
     { name: "Twitter", icon: <Twitter />, url: "https://twitter.com/your_handle" },
 ];
 
-const RenderList = (props) => {
+const RenderList = () => {
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
 
     useEffect(() => {
@@ -24,17 +25,17 @@ const RenderList = (props) => {
     }, []);
 
     if (isSmallScreen) {
-        return null; // Hide the component on small screens
+        return null;
     }
 
     return (
-        <div className=" fixed top-1/2 right-4 transform -translate-y-1/2 p-1  z-50">
+        <div className="fixed top-1/2 right-4 transform -translate-y-1/2 p-1 z-50 icon-container">
             <ul>
                 {!isSmallScreen &&
                     socialMediaLinks.map((link, index) => (
                         <li className="mb-5" key={index}>
                             <a href={link.url} target="_blank" rel="noopener noreferrer">
-                                <div className="icon-container">
+                                <div className="icon">
                                     {link.icon}
                                 </div>
                             </a>

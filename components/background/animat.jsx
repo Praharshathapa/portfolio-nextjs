@@ -35,7 +35,7 @@ const BackgroundAnimation = () => {
                     for (var i = 0; i < pathLength; i++) {
                         animations.push(anime({
                             targets: spherePathEls[i],
-                            stroke: { value: ['rgba(255,75,75,1)', 'rgba(80,80,80,.35)'], duration: 500 },
+                            stroke: { value: ['rgba(0, 255, 255, 1)', 'rgba(80, 80, 80, 0.35)'], duration: 500 },
                             translateX: [2, -4],
                             translateY: [2, -4],
                             easing: 'easeOutQuad',

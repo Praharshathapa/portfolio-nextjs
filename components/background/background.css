@@ -1,0 +1,24 @@
+/* BackgroundAnimation.css */
+
+:root {
+    --sphere-size: 900px;
+    --sphere-top: 50%;
+    --sphere-left: 50%;
+}
+
+.sphere-animation {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding-top: 100%;
+    z-index: 0;
+}
+
+.sphere {
+    position: absolute;
+    top: var(--sphere-top);
+    left: var(--sphere-left);
+    transform: translate(-50%, -50%);
+    width: var(--sphere-size);
+    height: var(--sphere-size);
+}

@@ -1,12 +1,15 @@
 import React from 'react';
-import { FaCheckCircle, FaHtml5, FaReact, FaPython, FaDatabase, FaChartBar } from 'react-icons/fa';
+import { FaCheckCircle, FaHtml5, FaReact, FaPython, FaChartBar, FaTable, FaRegChartBar, FaCode, FaCodeBranch, FaDatabase } from 'react-icons/fa';
 
 const skillsList = [
     { name: "HTML, CSS, JavaScript", icon: <FaHtml5 className="text-blue-500" /> },
     { name: "React, Node.js, Figma", icon: <FaReact className="text-blue-500" /> },
-    { name: "Python, C, C+", icon: <FaPython className="text-blue-500" /> },
+    { name: "Programming (R,Python)", icon: <FaPython className="text-blue-500" />, },
     { name: "Database Management (SQL, NoSQL)", icon: <FaDatabase className="text-blue-500" /> },
     { name: "Data Visualization (Matplotlib, Seaborn)", icon: <FaChartBar className="text-blue-500" /> },
+    { name: "Data Analysis with Pandas", icon: <FaTable className="text-blue-500" /> },
+    { name: "Machine Learning", icon: <FaRegChartBar className="text-blue-500" /> },
+    { name: "Version Control (Git)", icon: <FaCodeBranch className="text-blue-500" /> },
 ];
 
 const Skills = () => {

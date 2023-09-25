@@ -30,6 +30,10 @@ const ProjectList = () => {
     };
 
     return (
-        
+        <div className="container mx-auto py-8">
+            <h2 className="text-3xl font-semibold text-center mb-8 ">Projects</h2>
+        </div>
+    )
+}
 
 export default ProjectList;

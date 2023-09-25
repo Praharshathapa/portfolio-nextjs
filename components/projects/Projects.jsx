@@ -1,6 +1,8 @@
 // ProjectList.jsx
 import React, { useState } from 'react';
 import "./project.css"
+import { Dialog } from '@headlessui/react';
+
 
 const ProjectList = () => {
     const projects = [

@@ -6,12 +6,12 @@ const Education = () => {
         {
             institution: "Birmingham City University",
             degree: "Bachelor of Science in Data Science",
-            year: "2020 - 2022",
+            year: "2022 - 2026",
         },
         {
             institution: "Reliance College",
             degree: "High School Diploma",
-            year: "2022 - 2026",
+            year: "2020-2022",
         },
     ];
 

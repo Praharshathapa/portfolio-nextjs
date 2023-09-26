@@ -1,61 +1,36 @@
 "use client"
 import React from 'react';
 import NavBar from '@/components/NavBar.jsx';
-import Image from 'next/image';
 import RenderList from '@/components/socialicon';
 import Education from '@/components/education/education';
 import Skills from '@/components/skills/skills';
-import profile from '../app/profile.jpg';
 import ProjectList from '@/components/projects/Projects';
 import ContactForm from '@/components/contactinfo/Contactform';
-import "./page.css"
-import BackgroundAnimation from '../components/background/animat';
 import Hobby from '../components/hobby/hobby';
+import Headline from '@/components/headline/headline';
 
 export default function Home() {
   return (
-    <div className='custom-cursor  z-5'>
+    <div className='custom-cursor z-5'>
       <div className="min-h-screen">
         <NavBar />
         <RenderList />
-        <section id="hi" className="h-screen flex flex-col justify-center items-center z-1">
-          <BackgroundAnimation />
-
-          <div className="profile-container flex flex-col md:flex-row items-center ml-4">
-            <div className="profile-picture-container w-60 h-60 md:w-96 md:h-96 overflow-hidden shadow-lg">
-              <Image
-                src={profile}
-                alt="Profile Picture"
-                objectFit="cover"
-                layout="fill"
-                className="profile-picture rounded-custom-shape"
-              />
-            </div>
-            <div className="text-container relative ml-4 text-center md:text-left">
-              <h1 className="mb-2 glow-text">Hi! I am Praharsha Thapa</h1>
-              <div className="w-20 h-1 bg-cyan-600 rounded-full mb-4"></div>
-              <p className="text-2xl font-semibold">Welcome to my portfolio</p>
-            </div>
-          </div>
-        </section>
-
-
-        <div className="flex flex-col mx-auto mr-10 md:flex-row  max-w-screen-xl">
-          <div className="md:w-1/2 p-4 ">
+        <Headline />
+        <div className="flex flex-col mx-auto mr-2 md:mr-10 md:flex-row max-w-screen-xl">
+          <div className="md:w-1/2 p-4">
             <Education />
           </div>
           <div className="md:w-1/2 p-4">
             <Skills />
           </div>
         </div>
-
-        <section id="Projects" className="text-white h-screen bg-cyan-600 flex justify-center items-center">
+        <section id="Projects" className="min-h-screen bg-cyan-600 ">
           <ProjectList />
         </section>
-        <section id="Hobby" className="text-white h-screen bg-black text-center flex justify-center items-center">
+        <section id="Hobby" className=" min-h-screen   ">
           <Hobby />
         </section>
-        <section id="Contacts" className="text-white h-screen bg-cyan-700 flex justify-center items-center">
+        <section id="Contacts" className=" min-h-screen  ">
           <ContactForm />
         </section>
       </div>

@@ -19,7 +19,7 @@ const ProjectList = () => {
         },
     ];
 
-    const [selectedProject, setSelectedProject] = useState(False);
+    const [selectedProject, setSelectedProject] = useState(null);
 
     const openDescription = (projectId) => {
         setSelectedProject(projectId);

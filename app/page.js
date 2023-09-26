@@ -10,7 +10,7 @@ import ProjectList from '@/components/projects/Projects';
 import ContactForm from '@/components/contactinfo/Contactform';
 import "./page.css"
 import BackgroundAnimation from '../components/background/animat';
-import Hobby from '@/components/hobby';
+import Hobby from '../components/hobby/hobby';
 
 export default function Home() {
   return (

@@ -1,24 +1,23 @@
-// ProjectList.jsx
 import React, { useState } from 'react';
-import "./project.css"
 import { Dialog } from '@headlessui/react';
-
 
 const ProjectList = () => {
     const projects = [
         {
             id: 1,
-            img: "",
+            img: 'https://media.tenor.com/JhsJQcv80uYAAAAC/riding-bean-car-chase.gif',
             title: 'Pursuit-invasion',
-            description: 'This is a project in which map made of graph has two vehicle which is runner and chaser. The runner goes random nodes whereas chaser chase the runner using A* algorithm using heuristic function. and finds the shortest path.This is just project to learn about the data structure and algorithm.',
+            description:
+                'This is a project in which a map made of a graph has two vehicles: a runner and a chaser. The runner goes to random nodes, whereas the chaser chases the runner using the A* algorithm with a heuristic function to find the shortest path. This is just a project to learn about data structures and algorithms.',
             link: 'https://github.com/Praharshathapa/Pursuit-invasion',
         },
         {
             id: 2,
-            img: "https://gifdb.com/images/high/peter-griffin-family-guy-coming-at-you-hnw5f3wjemsglmyn.gif",
-            title: 'Dont Worry',
-            description: 'comming soon ',
-            link: "",
+            img:
+                'https://media.tenor.com/UONjvx6XGu0AAAAd/family-guy-peter-family-guy.gif',
+            title: 'Don’t Worry',
+            description: 'Coming soon',
+            link: '',
         },
     ];
 
@@ -34,8 +33,8 @@ const ProjectList = () => {
 
     return (
         <div className="container mx-auto py-8">
-            <h2 className="text-3xl font-semibold text-center mb-8 ">Projects</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <h2 className="text-7xl font-semibold text-center mb-8 text-black">Projects</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 {projects.map((project) => (
                     <div
                         key={project.id}
@@ -44,10 +43,10 @@ const ProjectList = () => {
                     >
                         <img
                             src={project.img}
-                            className="w-full h-auto rounded-lg mb-4"
-
+                            alt={project.title}
+                            className="w-full h-40 md:h-48 lg:h-56 xl:h-64 object-cover rounded-lg mb-4"
                         />
-                        <h3 className="text-2xl  mb-2 hover:text-cyan-600">{project.title}</h3>
+                        <h3 className="text-2xl mb-2 ">{project.title}</h3>
                         <p className="text-cyan-600 mb-4">{project.description}</p>
                         <a
                             href={project.link}
@@ -68,6 +67,11 @@ const ProjectList = () => {
                             <Dialog.Title className="text-2xl font-semibold text-cyan-600">
                                 {projects[selectedProject - 1].title}
                             </Dialog.Title>
+                            <img
+                                src={projects[selectedProject - 1].img}
+                                alt={projects[selectedProject - 1].title}
+                                className="w-full h-auto rounded-lg mt-2"
+                            />
                             <p className="text-cyan-600 mt-2">
                                 {projects[selectedProject - 1].description}
                             </p>
@@ -92,9 +96,7 @@ const ProjectList = () => {
                 </Dialog>
             )}
         </div>
-
-
-    )
-}
+    );
+};
 
 export default ProjectList;

@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect } from "react";
 import { Instagram, Linkedin, GitHub, Twitter } from "react-feather";
-import '../app/icon.css';
+import { motion } from "framer-motion";
 
 const socialMediaLinks = [
     { name: "Instagram", icon: <Instagram />, url: "https://www.instagram.com/your_username" },
@@ -9,6 +8,10 @@ const socialMediaLinks = [
     { name: "GitHub", icon: <GitHub />, url: "https://github.com/your_username" },
     { name: "Twitter", icon: <Twitter />, url: "https://twitter.com/your_handle" },
 ];
+
+const iconVariants = {
+    hover: { scale: 1.5 },
+};
 
 const RenderList = () => {
     const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
@@ -33,13 +36,19 @@ const RenderList = () => {
             <ul>
                 {!isSmallScreen &&
                     socialMediaLinks.map((link, index) => (
-                        <li className="mb-5" key={index}>
+                        <motion.li
+                            key={index}
+                            className="mb-5"
+                            initial="initial"
+                            whileHover="hover"
+                            variants={iconVariants}
+                        >
                             <a href={link.url} target="_blank" rel="noopener noreferrer">
                                 <div className="icon">
                                     {link.icon}
                                 </div>
                             </a>
-                        </li>
+                        </motion.li>
                     ))}
             </ul>
         </div>

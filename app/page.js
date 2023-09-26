@@ -8,6 +8,7 @@ import ProjectList from '@/components/projects/Projects';
 import ContactForm from '@/components/contactinfo/Contactform';
 import Hobby from '../components/hobby/hobby';
 import Headline from '@/components/headline/headline';
+import Footer from '@/components/footer/footer';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <div className="min-h-screen">
         <NavBar />
         <RenderList />
+
         <Headline />
         <div className="flex flex-col mx-auto mr-2 md:mr-10 md:flex-row max-w-screen-xl">
           <div className="md:w-1/2 p-4">
@@ -30,10 +32,11 @@ export default function Home() {
         <section id="Hobby" className=" min-h-screen   ">
           <Hobby />
         </section>
-        <section id="Contacts" className=" min-h-screen  ">
+        <section id="Contacts" className=" min-h-screen  bg-cyan-600">
           <ContactForm />
         </section>
+        <Footer/>
       </div>
-    </div>
+    </div >
   );
 }

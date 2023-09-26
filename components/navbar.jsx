@@ -13,12 +13,12 @@ function NavBar() {
                     <div>
                         <div className="flex items-center justify-between py-3 md:py-5 md:block">
                             <Link href="/">
-                                <h2 className="text-xl text-cyan-500 font-bold">~/dev-Praharsha</h2>
+                                <h2 className="text-2xl text-cyan-500 font-bold">~/dev-Praharsha</h2>
                             </Link>
                             {/* HAMBURGER BUTTON FOR MOBILE */}
                             <div className="md:hidden">
                                 <button
-                                    className="p-2 text-gray-600 rounded-md outline-none"
+                                    className="p-2 text-gray-600 rounded-md outline-none "
                                     onClick={() => setNavbar(!navbar)}
                                 >
                                     {navbar ? (

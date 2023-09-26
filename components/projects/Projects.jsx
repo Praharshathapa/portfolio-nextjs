@@ -8,14 +8,17 @@ const ProjectList = () => {
     const projects = [
         {
             id: 1,
+            img: "",
             title: 'Pursuit-invasion',
             description: 'This is a project in which map made of graph has two vehicle which is runner and chaser. The runner goes random nodes whereas chaser chase the runner using A* algorithm using heuristic function. and finds the shortest path.This is just project to learn about the data structure and algorithm.',
             link: 'https://github.com/Praharshathapa/Pursuit-invasion',
         },
         {
             id: 2,
-            title: 'Project 2',
-            description: 'This is the description of Project 2.',
+            img: "https://gifdb.com/images/high/peter-griffin-family-guy-coming-at-you-hnw5f3wjemsglmyn.gif",
+            title: 'Dont Worry',
+            description: 'comming soon ',
+            link: "",
         },
     ];
 
@@ -36,16 +39,16 @@ const ProjectList = () => {
                 {projects.map((project) => (
                     <div
                         key={project.id}
-                        className="bg-white p-4 rounded-lg shadow-md cursor-pointer transform hover:scale-105 transition-transform duration-300"
-                        onClick={() => openDialog(project.id)}
+                        className="bg-black p-4 rounded-lg shadow-md cursor-pointer transform hover:scale-105 transition-transform duration-300"
+                        onClick={() => openDescription(project.id)}
                     >
                         <img
-                            src={`${project.id}`}
-                            alt={project.title}
+                            src={project.img}
                             className="w-full h-auto rounded-lg mb-4"
+
                         />
-                        <h3 className="text-xl font-semibold mb-2 hover:text-cyan-600">{project.title}</h3>
-                        <p className="text-gray-600 mb-4">{project.description}</p>
+                        <h3 className="text-2xl  mb-2 hover:text-cyan-600">{project.title}</h3>
+                        <p className="text-cyan-600 mb-4">{project.description}</p>
                         <a
                             href={project.link}
                             target="_blank"
@@ -57,7 +60,39 @@ const ProjectList = () => {
                     </div>
                 ))}
             </div>
+            {selectedProject !== null && (
+                <Dialog open={selectedProject !== null} onClose={closeDescription} as="div">
+                    <div className="fixed inset-0 overflow-y-auto z-50 flex items-center justify-center">
+                        <Dialog.Overlay className="fixed inset-0 bg-black opacity-40" />
+                        <div className="bg-black p-4 rounded shadow-md z-50 max-w-lg">
+                            <Dialog.Title className="text-2xl font-semibold text-cyan-600">
+                                {projects[selectedProject - 1].title}
+                            </Dialog.Title>
+                            <p className="text-cyan-600 mt-2">
+                                {projects[selectedProject - 1].description}
+                            </p>
+                            <div className="mt-4">
+                                <a
+                                    href={projects[selectedProject - 1].link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-cyan-600 hover:underline"
+                                >
+                                    Visit Project
+                                </a>
+                                <button
+                                    onClick={closeDescription}
+                                    className="ml-4 text-cyan-600 hover:text-cyan-600"
+                                >
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </Dialog>
+            )}
         </div>
+
 
     )
 }

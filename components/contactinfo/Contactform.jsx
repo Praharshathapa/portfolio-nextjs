@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import "./contactform.css"
 
-const ContactForm = () => {
+function ContactForm() {
     const [formData, setFormData] = useState({
-        name: '',
         email: '',
+        phone: '',
+        first: '',
+        last: '',
         message: '',
     });
 
@@ -18,51 +19,96 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData);
+
+
+        e.target.reset();
+
+        setFormData({
+            email: '',
+            phone: '',
+            first: '',
+            last: '',
+            message: '',
+        });
     };
 
     return (
-        <section id="Contacts" className="text-white h-screen bg-cyan-700 flex justify-center items-center">
-            <div className="contact-form-container">
-                <h1 className="text-6xl font-bold mb-6 text-cyan-600">Contact Me</h1>
-                <form className="contact-form" onSubmit={handleSubmit}>
-                    <div className="form-group">
+        <div className="container mx-auto py-8  text-white">
+            <h2 className="text-6xl font-semibold text-center mb-10">Contact Me</h2>
+            <div className="bg-gray-300 p-8 rounded-lg shadow-lg">
+                <form onSubmit={handleSubmit}>
+                    <div className="mb-4">
+                        <label htmlFor="frm-email" className="text-cyan-800 font-medium block mb-2">Email</label>
                         <input
-                            type="text"
-                            name="name"
-                            placeholder="Name"
-                            value={formData.name}
-                            onChange={handleInputChange}
-                            required
-                        />
-                    </div>
-                    <div className="form-group">
-                        <input
+                            id="frm-email"
                             type="email"
                             name="email"
-                            placeholder="Email"
+                            autoComplete="email"
+                            required
+                            className="w-full px-4 py-2 border rounded-lg focus:ring-cyan-600 focus:border-cyan-600 text-cyan-800"
                             value={formData.email}
                             onChange={handleInputChange}
-                            required
                         />
                     </div>
-                    <div className="form-group">
+                    <div className="mb-4">
+                        <label htmlFor="frm-phone" className="text-cyan-800 font-medium block mb-2">Phone</label>
+                        <input
+                            id="frm-phone"
+                            type="text"
+                            name="phone"
+                            autoComplete="tel"
+                            required
+                            className="w-full px-4 py-2 border rounded-lg focus:ring-cyan-600 focus:border-cyan-600 text-cyan-800"
+                            value={formData.phone}
+                            onChange={handleInputChange}
+                        />
+                    </div>
+                    <div className="mb-4 flex">
+                        <div className="w-1/2 pr-2">
+                            <label htmlFor="frm-first" className="text-cyan-800 font-medium block mb-2">First Name</label>
+                            <input
+                                id="frm-first"
+                                type="text"
+                                name="first"
+                                autoComplete="given-name"
+                                required
+                                className="w-full px-4 py-2 border rounded-lg focus:ring-cyan-600 focus:border-cyan-600 text-cyan-800"
+                                value={formData.first}
+                                onChange={handleInputChange}
+                            />
+                        </div>
+                        <div className="w-1/2 pl-2">
+                            <label htmlFor="frm-last" className="text-cyan-800 font-medium block mb-2">Last Name</label>
+                            <input
+                                id="frm-last"
+                                type="text"
+                                name="last"
+                                autoComplete="family-name"
+                                required
+                                className="w-full px-4 py-2 border rounded-lg focus:ring-cyan-600 focus:border-cyan-600 text-cyan-800"
+                                value={formData.last}
+                                onChange={handleInputChange}
+                            />
+                        </div>
+                    </div>
+                    <div className="mb-4">
+                        <label htmlFor="frm-message" className="text-cyan-800 font-medium block mb-2">Message</label>
                         <textarea
+                            id="frm-message"
+                            rows="6"
                             name="message"
-                            placeholder="Message"
+                            className="w-full px-4 py-2 border rounded-lg focus:ring-cyan-600 focus:border-cyan-600 text-cyan-800"
                             value={formData.message}
                             onChange={handleInputChange}
-                            rows="4"
-                            required
                         ></textarea>
                     </div>
-                    <div className="form-group">
-                        <button type="submit">Submit</button>
+                    <div className="text-center">
+                        <button type="submit" className="bg-cyan-600 text-white py-3 px-6 rounded-lg hover:bg-cyan-700 transition duration-300 ease-in-out">Submit</button>
                     </div>
                 </form>
             </div>
-        </section>
+        </div>
     );
-};
+}
 
 export default ContactForm;

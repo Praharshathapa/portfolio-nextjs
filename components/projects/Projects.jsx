@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Dialog } from '@headlessui/react';
+import {  motion } from 'framer-motion';
 
 const ProjectList = () => {
     const projects = [
@@ -82,16 +83,19 @@ const ProjectList = () => {
         setSelectedProject(null);
     };
 
+  
+
     return (
         <div className="container mx-auto py-10 bg-black">
             <h2 className="text-6xl font-semibold text-center mt-8 p-5 text-cyan-600">Projects</h2>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {projects.map((project) => (
-                    <div
+                    <motion.div
                         key={project.id}
-                        className="p-3 rounded-lg shadow-md cursor-pointer hover:shadow-2xl transform hover:scale-105 transition-transform duration-300 bg-cyan-600"
+                        className="p-3 rounded-lg shadow-md cursor-pointer bg-cyan-600"
                         onClick={() => openDescription(project.id)}
+                        whileHover={{ scale: 1.1, rotate: 5, transition: { duration: 0.3 } }}
                     >
                         <img
                             src={project.img}
@@ -99,7 +103,7 @@ const ProjectList = () => {
                             className="w-full h-40 object-cover rounded-lg"
                         />
                         <h3 className="text-2xl font-semibold mt-2 mb-2">{project.title}</h3>
-                        <p className="text-gray-700 ">{project.description2}</p>
+                        <p className="text-gray-700">{project.description2}</p>
                         <a
                             href={project.link}
                             target="_blank"
@@ -108,11 +112,11 @@ const ProjectList = () => {
                         >
                             Visit Project
                         </a>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
             {selectedProject !== null && (
-                <Dialog open={selectedProject !== null} onClose={closeDescription} as="div">
+                <Dialog open={true} onClose={closeDescription} as="div">
                     <div className="fixed inset-0 overflow-y-auto z-50 flex items-center justify-center">
                         <Dialog.Overlay className="fixed inset-0 bg-black opacity-60" />
                         <div className="bg-white p-6 rounded-lg shadow-lg z-50 max-w-lg">
@@ -146,6 +150,7 @@ const ProjectList = () => {
                         </div>
                     </div>
                 </Dialog>
+              
             )}
         </div>
     );

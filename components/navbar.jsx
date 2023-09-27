@@ -1,14 +1,25 @@
-import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "react-feather";
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import { motion, useAnimation } from 'framer-motion';
 
 function NavBar() {
     const [navbar, setNavbar] = useState(false);
+    const controls = useAnimation();
 
     const scrollToTop = () => {
         scroll.scrollToTop();
         setNavbar(false);
+    };
+
+    const toggleNavbar = () => {
+        setNavbar(!navbar);
+        controls.start({
+            opacity: navbar ? 1 : 0.8,
+            scale: navbar ? 1 : 1.1,
+            rotate: navbar ? 0 : 180,
+            transition: { duration: 0.5, type: "spring" },
+        });
     };
 
     return (
@@ -20,17 +31,22 @@ function NavBar() {
                             <ScrollLink to="hi" smooth={true} duration={500} onClick={scrollToTop}>
                                 <h2 className="text-2xl text-cyan-500 font-bold">~/dev-Praharsha</h2>
                             </ScrollLink>
-                            {/* HAMBURGER BUTTON FOR MOBILE */}
                             <div className="md:hidden">
                                 <button
-                                    className="p-2 text-gray-600 rounded-md outline-none "
-                                    onClick={() => setNavbar(!navbar)}
+                                    className="p-2 text-gray-600 rounded-md outline-none"
+                                    onClick={toggleNavbar}
                                 >
-                                    {navbar ? (
-                                        <X width={30} height={30} alt="logo" />
-                                    ) : (
-                                        <Menu width={30} height={30} alt="logo" />
-                                    )}
+                                    <motion.div
+                                        className="menu-icon"
+                                        initial={{ scale: 1, opacity: 1 }}
+                                        animate={controls}
+                                    >
+                                        {navbar ? (
+                                            <X width={30} height={30} alt="logo" />
+                                        ) : (
+                                            <Menu width={30} height={30} alt="logo" />
+                                        )}
+                                    </motion.div>
                                 </button>
                             </div>
                         </div>

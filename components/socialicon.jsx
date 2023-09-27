@@ -44,7 +44,7 @@ const RenderList = () => {
                             variants={iconVariants}
                         >
                             <a href={link.url} target="_blank" rel="noopener noreferrer">
-                                <div className="icon">
+                                <div className="icon text-cyan-500 hover:text-cyan-100">
                                     {link.icon}
                                 </div>
                             </a>

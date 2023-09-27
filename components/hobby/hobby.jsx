@@ -4,7 +4,7 @@ import art1 from "../hobby/pic1.jpg";
 import art2 from "../hobby/pic2.jpg";
 import art3 from "../hobby/pic3.jpg";
 import art4 from "../hobby/pic4.jpg";
-import art5 from "../hobby/pic5.jpg";
+import art5 from "../hobby/pic6.jpg";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Image from 'next/image';
@@ -21,7 +21,7 @@ const hobbies = [
   },
   {
     id: 2,
-    name: "Football not soccer",
+    name: "Football",
     Image: art4,
     description: "sIUUUUUUUUUUUUUUUUUU!!!!!!!!!",
 
@@ -40,21 +40,21 @@ const hobbies = [
     description: "Art-Stil Life",
 
   },
+
   {
     id: 5,
-    name: "Music-Basuri(mostly 10 yrs)",
+    name: "Music-Basuri(about 10 yrs)",
     Image: art5,
-    description: "Wondering who is he? My flute teacher teacher(former flutist of KUTUMBA)",
+    description: "Wondering who is he? ME..",
 
   },
-
 ];
 
 const settings = {
   dots: false,
   infinite: true,
   speed: 500,
-  slidesToShow: 3,
+  slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 1500,
@@ -78,7 +78,7 @@ const settings = {
 
 const Hobby = () => {
   return (
-    <section id="Hobby" className="h-screen bg-black text-white flex flex-col justify-center items-center">
+    <section id="Hobby" className=" bg-black text-white flex flex-col justify-center items-center min-h-screen">
       <h1 className="text-6xl font-bold text-cyan-600 mb-6">Hobbies</h1>
       <div className="w-full max-w-7xl mx-auto">
         <Slider {...settings}>

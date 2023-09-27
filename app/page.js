@@ -8,15 +8,15 @@ import ProjectList from '@/components/projects/Projects';
 import ContactForm from '@/components/contactinfo/Contactform';
 import Hobby from '../components/hobby/hobby';
 import Headline from '@/components/headline/headline';
-import Footer from '@/components/footer/footer';
 
 export default function Home() {
-  return (
-    <div className='custom-cursor z-5'>
-      <div className="min-h-screen">
-        <NavBar />
-        <RenderList />
 
+
+  return (
+    <div className="bg-black text-white custom-cursor" >
+      <NavBar />
+      <RenderList />
+      <div>
         <Headline />
         <div className="flex flex-col mx-auto mr-2 md:mr-10 md:flex-row max-w-screen-xl">
           <div className="md:w-1/2 p-4">
@@ -26,17 +26,15 @@ export default function Home() {
             <Skills />
           </div>
         </div>
-        <section id="Projects" className="min-h-screen bg-cyan-600 ">
-          <ProjectList />
-        </section>
-        <section id="Hobby" className=" min-h-screen   ">
-          <Hobby />
-        </section>
-        <section id="Contacts" className=" min-h-screen  bg-cyan-600">
-          <ContactForm />
-        </section>
-        <Footer/>
       </div>
-    </div >
+      <section id="Projects" className="min-h-screen bg-black text-white">
+        <RenderList />
+        <ProjectList />
+      </section>
+      <Hobby />
+      <section id="Contacts" className="bg-black text-white">
+        <ContactForm />
+      </section>
+    </div>
   );
 }

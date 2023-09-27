@@ -3,11 +3,12 @@ import { Instagram, Linkedin, GitHub, Twitter } from "react-feather";
 import { motion } from "framer-motion";
 
 const socialMediaLinks = [
-    { name: "Instagram", icon: <Instagram />, url: "https://www.instagram.com/your_username" },
-    { name: "LinkedIn", icon: <Linkedin />, url: "https://www.linkedin.com/in/your_profile" },
-    { name: "GitHub", icon: <GitHub />, url: "https://github.com/your_username" },
-    { name: "Twitter", icon: <Twitter />, url: "https://twitter.com/your_handle" },
+    { name: 'Instagram', icon: <Instagram />, url: 'https://www.instagram.com/praharsha__7/' },
+    { name: 'LinkedIn', icon: <Linkedin />, url: 'https://www.linkedin.com/in/praharsha-thapa-26a727147/' },
+    { name: 'GitHub', icon: <GitHub />, url: 'https://github.com/Praharshathapa' },
+    { name: 'Twitter', icon: <Twitter />, url: 'https://twitter.com/dataminer_12' },
 ];
+
 
 const iconVariants = {
     hover: { scale: 1.5 },

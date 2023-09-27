@@ -45,8 +45,8 @@ function ContactForm() {
     };
 
     return (
-        <div className="min-h-screen bg-black container mx-auto py-10 text-white flex flex-col lg:flex-row ml-11">
-            <div className="lg:w-1/2 mt-10">
+        <div className="min-h-screen bg-black container mx-auto py-10 text-white flex flex-col lg:flex-row ml-10">
+            <div className="lg:w-1/2 mt-10 mr-6">
                 <h2 className="text-4xl md:text-6xl font-semibold text-center mb-6 text-cyan-600">Contact Me</h2>
                 <p className="text-cyan-600 mb-6 text-center">
                     <a
@@ -79,8 +79,8 @@ function ContactForm() {
                     </ul>
                 </div>
             </div>
-            <div className="lg:w-1/2 p-8">
-                <div className="bg-gray-300 p-8 rounded-lg shadow-lg">
+            <div className="lg:w-1/2 p-7">
+                <div className="bg-gray-300 p-8 rounded-lg shadow-lg mr-8">
                     <form onSubmit={handleSubmit}>
                         <div className="mb-4">
                             <label  className="text-cyan-800 font-medium block mb-2">Email</label>

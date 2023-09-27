@@ -10,9 +10,59 @@ const ProjectList = () => {
             description:
                 'This is a project in which a map made of a graph has two vehicles: a runner and a chaser. The runner goes to random nodes, whereas the chaser chases the runner using the A* algorithm with a heuristic function to find the shortest path. This is just a project to learn about data structures and algorithms.',
             link: 'https://github.com/Praharshathapa/Pursuit-invasion',
+            description2:'Navigating the Chase: A Graph-Based Pursuit and Evasion Simulation',
         },
         {
             id: 2,
+            img:
+                'https://media.tenor.com/yzkYMMlUy2gAAAAj/makeamericagreat.gif',
+            title: 'Fake News Detection',
+            description: ' Fake news is sometimes transmitted through the internet by some unauthorized sources, which creates issues for the targeted person and it makes them panic and leads to even violence. ',
+            link: '',
+            description2:"Guarding the Truth: Unmasking Misinformation in the Digital Age",
+        },
+        {
+            id: 3,
+            img:
+                'https://media.tenor.com/UONjvx6XGu0AAAAd/family-guy-peter-family-guy.gif',
+            title: 'Don’t Worry',
+            description: 'Coming soon',
+            link: '',
+        },
+        {
+            id: 4,
+            img:
+                'https://media.tenor.com/UONjvx6XGu0AAAAd/family-guy-peter-family-guy.gif',
+            title: 'Don’t Worry',
+            description: 'Coming soon',
+            link: '',
+        },
+        {
+            id: 5,
+            img:
+                'https://media.tenor.com/UONjvx6XGu0AAAAd/family-guy-peter-family-guy.gif',
+            title: 'Don’t Worry',
+            description: 'Coming soon',
+            link: '',
+        },
+        {
+            id: 6,
+            img:
+                'https://media.tenor.com/UONjvx6XGu0AAAAd/family-guy-peter-family-guy.gif',
+            title: 'Don’t Worry',
+            description: 'Coming soon',
+            link: '',
+        },
+        {
+            id: 7,
+            img:
+                'https://media.tenor.com/UONjvx6XGu0AAAAd/family-guy-peter-family-guy.gif',
+            title: 'Don’t Worry',
+            description: 'Coming soon',
+            link: '',
+        },
+        {
+            id: 8,
             img:
                 'https://media.tenor.com/UONjvx6XGu0AAAAd/family-guy-peter-family-guy.gif',
             title: 'Don’t Worry',
@@ -32,27 +82,36 @@ const ProjectList = () => {
     };
 
     return (
-        <div className="container mx-auto py-8">
-            <h2 className="text-7xl font-semibold text-center mb-8 text-black">Projects</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <div className="container mx-auto py-10 bg-black">
+            <h2 className="text-6xl font-semibold text-center mt-8 p-5 text-cyan-600">Projects</h2>
+            <p className="text-cyan-600 mb-6">
+                
+                <a
+                    href="mailto:thapapraharsha@gmail.com"
+                    className="text-cyan-200 hover:text-cyan-100 transition duration-300 ease-in-out text-xl"
+                >
+                    thapapraharsha@gmail.com
+                </a>
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {projects.map((project) => (
                     <div
                         key={project.id}
-                        className="bg-black p-4 rounded-lg shadow-md cursor-pointer transform hover:scale-105 transition-transform duration-300"
+                        className="p-3 rounded-lg shadow-md cursor-pointer hover:shadow-2xl transform hover:scale-105 transition-transform duration-300 bg-cyan-600"
                         onClick={() => openDescription(project.id)}
                     >
                         <img
                             src={project.img}
                             alt={project.title}
-                            className="w-full h-40 md:h-48 lg:h-56 xl:h-64 object-cover rounded-lg mb-4"
+                            className="w-full h-40 object-cover rounded-lg"
                         />
-                        <h3 className="text-2xl mb-2 ">{project.title}</h3>
-                        <p className="text-cyan-600 mb-4">{project.description}</p>
+                        <h3 className="text-2xl font-semibold mt-2 mb-2">{project.title}</h3>
+                        <p className="text-gray-700 ">{project.description2}</p>
                         <a
                             href={project.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-cyan-600 hover:underline"
+                            className="text-black hover:underline"
                         >
                             Visit Project
                         </a>
@@ -62,17 +121,17 @@ const ProjectList = () => {
             {selectedProject !== null && (
                 <Dialog open={selectedProject !== null} onClose={closeDescription} as="div">
                     <div className="fixed inset-0 overflow-y-auto z-50 flex items-center justify-center">
-                        <Dialog.Overlay className="fixed inset-0 bg-black opacity-40" />
-                        <div className="bg-black p-4 rounded shadow-md z-50 max-w-lg">
-                            <Dialog.Title className="text-2xl font-semibold text-cyan-600">
+                        <Dialog.Overlay className="fixed inset-0 bg-black opacity-60" />
+                        <div className="bg-white p-6 rounded-lg shadow-lg z-50 max-w-lg">
+                            <Dialog.Title className="text-3xl font-semibold text-cyan-600">
                                 {projects[selectedProject - 1].title}
                             </Dialog.Title>
                             <img
                                 src={projects[selectedProject - 1].img}
                                 alt={projects[selectedProject - 1].title}
-                                className="w-full h-auto rounded-lg mt-2"
+                                className="w-full h-auto rounded-lg mt-4"
                             />
-                            <p className="text-cyan-600 mt-2">
+                            <p className="mt-4 text-gray-700">
                                 {projects[selectedProject - 1].description}
                             </p>
                             <div className="mt-4">
@@ -86,7 +145,7 @@ const ProjectList = () => {
                                 </a>
                                 <button
                                     onClick={closeDescription}
-                                    className="ml-4 text-cyan-600 hover:text-cyan-600"
+                                    className="ml-4 text-cyan-600 hover:text-cyan-800"
                                 >
                                     Close
                                 </button>

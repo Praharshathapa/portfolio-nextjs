@@ -1,9 +1,15 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "react-feather";
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 
 function NavBar() {
     const [navbar, setNavbar] = useState(false);
+
+    const scrollToTop = () => {
+        scroll.scrollToTop();
+        setNavbar(false);
+    };
 
     return (
         <div className='custom-cursor'>
@@ -11,9 +17,9 @@ function NavBar() {
                 <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
                     <div>
                         <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                            <Link href="/">
+                            <ScrollLink to="hi" smooth={true} duration={500} onClick={scrollToTop}>
                                 <h2 className="text-2xl text-cyan-500 font-bold">~/dev-Praharsha</h2>
-                            </Link>
+                            </ScrollLink>
                             {/* HAMBURGER BUTTON FOR MOBILE */}
                             <div className="md:hidden">
                                 <button
@@ -36,32 +42,30 @@ function NavBar() {
                         >
                             <ul className="h-screen md:h-auto items-center justify-center md:flex">
                                 <li className="pb-2 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-cyan-900 border-cyan-600 md:hover:text-cyan-600 md:hover:bg-transparent">
-                                    <Link href="#hi" onClick={() => setNavbar(!navbar)}>
+                                    <ScrollLink to="hi" smooth={true} duration={500} onClick={() => setNavbar(!navbar)}>
                                         About
-                                    </Link>
+                                    </ScrollLink>
                                 </li>
                                 <li className="pb-2 text-xl text-white py-2 px-6 text-center border-b-2 md:border-b-0 hover:bg-cyan-600 border-cyan-600 md:hover:text-cyan-600 md:hover:bg-transparent">
-                                    <Link href="#Projects" onClick={() => setNavbar(!navbar)}>
+                                    <ScrollLink to="Projects" smooth={true} duration={500} onClick={() => setNavbar(!navbar)}>
                                         Projects
-                                    </Link>
+                                    </ScrollLink>
                                 </li>
                                 <li className="pb-2 text-xl text-white py-2 px-6 text-center border-b-2 md:border-b-0 hover:bg-cyan-600 border-cyan-600 md:hover:text-cyan-600 md:hover:bg-transparent">
-                                    <Link href="#Hobby" onClick={() => setNavbar(!navbar)}>
+                                    <ScrollLink to="Hobby" smooth={true} duration={500} onClick={() => setNavbar(!navbar)}>
                                         Hobbies
-                                    </Link>
+                                    </ScrollLink>
                                 </li>
                                 <li className="pb-2 text-xl text-white py-2 px-10 text-center border-b-2 md:border-b-0 hover:bg-cyan-600 border-cyan-600 md:hover:text-cyan-600 md:hover:bg-transparent">
-                                    <Link href="#Contacts" onClick={() => setNavbar(!navbar)}>
+                                    <ScrollLink to="Contacts" smooth={true} duration={500} onClick={() => setNavbar(!navbar)}>
                                         Contact
-                                    </Link>
+                                    </ScrollLink>
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </nav>
-
-
         </div>
     );
 }

@@ -32,7 +32,10 @@ const Headline = () => {
                 <span>Developer</span>
                 <Typist.Backspace count={10} delay={1000} />
                 <span>Learner</span>
+                <Typist.Backspace count={10} delay={1000} />
+                <span>Praharsha Thapa</span>
               </Typist>
+              
             </span>
           </h1>
                     <div className="w-20 h-1 bg-cyan-600 rounded-full mb-4"></div>

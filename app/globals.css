@@ -23,3 +23,17 @@ body {
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 
 }
+
+::-webkit-scrollbar{
+  width:1.2rem;
+}
+::-webkit-scrollbar-track{
+  background:none ;
+
+}
+::-webkit-scrollbar-thumb{
+  background:#008ba3;
+  border: 5px solid transparent;
+  border-radius:12px;
+  background-clip: content-box;
+}

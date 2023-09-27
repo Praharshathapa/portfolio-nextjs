@@ -9,6 +9,7 @@ import ContactForm from '@/components/contactinfo/Contactform';
 import Hobby from '../components/hobby/hobby';
 import Headline from '@/components/headline/headline';
 
+
 export default function Home() {
 
 
@@ -28,13 +29,18 @@ export default function Home() {
         </div>
       </div>
       <section id="Projects" className="min-h-screen bg-black text-white">
-        <RenderList />
         <ProjectList />
       </section>
       <Hobby />
       <section id="Contacts" className="bg-black text-white">
         <ContactForm />
       </section>
+      <div>
+      <div></div>
+  <div className=" text-base text-center mb-4">
+    <p className="text-gray-400">&copy; {new Date().getFullYear()} All rights reserved | PraharshaThapa</p>
+  </div>
+      </div>
     </div>
   );
 }

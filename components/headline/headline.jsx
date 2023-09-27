@@ -3,6 +3,7 @@ import BackgroundAnimation from '../background/animat';
 import profile from './profile.jpg';
 import Image from 'next/image';
 import './page.css';
+import Typist from 'react-typist';
 
 const Headline = () => {
 
@@ -20,7 +21,20 @@ const Headline = () => {
                     />
                 </div>
                 <div className="text-container relative ml-4 text-center md:text-left">
-                    <h1 className="mb-2 glow-text">Hi! I am Praharsha Thapa</h1>
+                <h1 className="mb-2 glow-text">
+            Hi! I am 
+            <span className="glow-text">
+              <Typist>
+              <span>Praharsha Thapa</span>
+              <Typist.Backspace count={15} delay={1000} />
+                <span>Data Engineer</span>
+                <Typist.Backspace count={13} delay={1000} />
+                <span>Developer</span>
+                <Typist.Backspace count={10} delay={1000} />
+                <span>Learner</span>
+              </Typist>
+            </span>
+          </h1>
                     <div className="w-20 h-1 bg-cyan-600 rounded-full mb-4"></div>
                     <p className="text-2xl font-semibold">Welcome to my portfolio</p>
                 </div>

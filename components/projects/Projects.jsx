@@ -24,49 +24,50 @@ const ProjectList = () => {
         {
             id: 3,
             img:
-                'https://media.tenor.com/UONjvx6XGu0AAAAd/family-guy-peter-family-guy.gif',
-            title: 'Don’t Worry',
-            description: 'Coming soon',
+                'https://miro.medium.com/v2/resize:fit:828/format:webp/1*xSqK9iS7nZAaB-Sdwiwjow.png',
+            title: 'Credit Card Fraud Detection',
+            description2: 'Protecting Your Finances and Peace of Mind',
             link: '',
         },
         {
             id: 4,
             img:
-                'https://media.tenor.com/UONjvx6XGu0AAAAd/family-guy-peter-family-guy.gif',
-            title: 'Don’t Worry',
-            description: 'Coming soon',
+                'https://pyimagesearch.com/wp-content/uploads/2019/02/breast_cancer_classification_header.jpg',
+                title: 'Classifying Breast Cancer',
+                description: 'Empowering Early Detection and Treatment',
             link: '',
         },
         {
             id: 5,
             img:
-                'https://media.tenor.com/UONjvx6XGu0AAAAd/family-guy-peter-family-guy.gif',
-            title: 'Don’t Worry',
-            description: 'Coming soon',
-            link: '',
+                'https://i.pinimg.com/564x/d0/64/c3/d064c3e32c2f0f74a0346d1506998a50.jpg',
+                title: 'Minecraft Town layout',
+                description: 'Sample Project and Description',
+                description2: "Sample Project and Description",
+                link: '',
         },
         {
             id: 6,
             img:
                 'https://media.tenor.com/UONjvx6XGu0AAAAd/family-guy-peter-family-guy.gif',
-            title: 'Don’t Worry',
-            description: 'Coming soon',
+                title: 'Sample Project',
+                description: 'Sample Description',
             link: '',
         },
         {
             id: 7,
             img:
-                'https://media.tenor.com/UONjvx6XGu0AAAAd/family-guy-peter-family-guy.gif',
-            title: 'Don’t Worry',
-            description: 'Coming soon',
+                'https://24.media.tumblr.com/tumblr_ma8hseCSi11qcj88oo1_500.gif',
+                title: 'Sample Project',
+                description: 'Sample Description',
             link: '',
         },
         {
             id: 8,
             img:
-                'https://media.tenor.com/UONjvx6XGu0AAAAd/family-guy-peter-family-guy.gif',
-            title: 'Don’t Worry',
-            description: 'Coming soon',
+                'https://44.media.tumblr.com/22fbca2e2896667c1eaeee0efd00f6f5/tumblr_nwevu7qfxa1ujuk5ho1_1280.gif',
+                title: 'Sample Project',
+                description: 'Sample Description',
             link: '',
         },
     ];
@@ -84,15 +85,7 @@ const ProjectList = () => {
     return (
         <div className="container mx-auto py-10 bg-black">
             <h2 className="text-6xl font-semibold text-center mt-8 p-5 text-cyan-600">Projects</h2>
-            <p className="text-cyan-600 mb-6">
-                
-                <a
-                    href="mailto:thapapraharsha@gmail.com"
-                    className="text-cyan-200 hover:text-cyan-100 transition duration-300 ease-in-out text-xl"
-                >
-                    thapapraharsha@gmail.com
-                </a>
-            </p>
+            
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {projects.map((project) => (
                     <div

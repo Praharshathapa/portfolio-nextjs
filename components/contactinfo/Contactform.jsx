@@ -45,13 +45,13 @@ function ContactForm() {
     };
 
     return (
-        <div className="min-h-screen bg-black container mx-auto py-10 text-white flex flex-col lg:flex-row">
-            <div className="lg:w-1/2 p-8">
+        <div className="min-h-screen bg-black container mx-auto py-10 text-white flex flex-col lg:flex-row ml-11">
+            <div className="lg:w-1/2 mt-10">
                 <h2 className="text-4xl md:text-6xl font-semibold text-center mb-6 text-cyan-600">Contact Me</h2>
                 <p className="text-cyan-600 mb-6 text-center">
                     <a
                         href="mailto:thapapraharsha@gmail.com"
-                        className="text-cyan-200 hover:text-cyan-100 transition duration-300 ease-in-out text-lg"
+                        className="text-cyan-200 hover:text-cyan-100 transition duration-300 ease-in-out text-xl"
                     >
                         thapapraharsha@gmail.com
                     </a>
@@ -83,9 +83,8 @@ function ContactForm() {
                 <div className="bg-gray-300 p-8 rounded-lg shadow-lg">
                     <form onSubmit={handleSubmit}>
                         <div className="mb-4">
-                            <label htmlFor="frm-email" className="text-cyan-800 font-medium block mb-2">Email</label>
+                            <label  className="text-cyan-800 font-medium block mb-2">Email</label>
                             <input
-                                id="frm-email"
                                 type="email"
                                 name="email"
                                 autoComplete="email"
@@ -97,9 +96,8 @@ function ContactForm() {
                         </div>
 
                         <div className="mb-4">
-                            <label htmlFor="frm-phone" className="text-cyan-800 font-medium block mb-2">Phone</label>
+                            <label  className="text-cyan-800 font-medium block mb-2">Phone</label>
                             <input
-                                id="frm-phone"
                                 type="text"
                                 name="phone"
                                 autoComplete="tel"
@@ -112,9 +110,8 @@ function ContactForm() {
 
                         <div className="mb-4 flex flex-col lg:flex-row">
                             <div className="lg:w-1/2 pr-2">
-                                <label htmlFor="frm-first" className="text-cyan-800 font-medium block mb-2">First Name</label>
+                                <label  className="text-cyan-800 font-medium block mb-2">First Name</label>
                                 <input
-                                    id="frm-first"
                                     type="text"
                                     name="first"
                                     autoComplete="given-name"
@@ -125,7 +122,7 @@ function ContactForm() {
                                 />
                             </div>
                             <div className="lg:w-1/2 pl-2">
-                                <label htmlFor="frm-last" className="text-cyan-800 font-medium block mb-2">Last Name</label>
+                                <label  className="text-cyan-800 font-medium block mb-2">Last Name</label>
                                 <input
                                     id="frm-last"
                                     type="text"
@@ -140,7 +137,7 @@ function ContactForm() {
                         </div>
 
                         <div className="mb-4">
-                            <label htmlFor="frm-message" className="text-cyan-800 font-medium block mb-2">Message</label>
+                            <label  className="text-cyan-800 font-medium block mb-2">Message</label>
                             <textarea
                                 id="frm-message"
                                 rows="6"

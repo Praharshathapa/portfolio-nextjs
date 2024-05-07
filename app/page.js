@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import NavBar from './components/NavBar'; 
+import NavBar from '../components/NavBar'; 
 import RenderList from '@/components/socialicon';
 import Education from '@/components/education/education';
 import Skills from '@/components/skills/skills';

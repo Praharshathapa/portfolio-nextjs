@@ -1,13 +1,13 @@
 "use client"
 import React from 'react';
 import NavBar from '../components/navbar'; 
-import RenderList from '@/components/socialicon';
-import Education from '@/components/education/education';
-import Skills from '@/components/skills/skills';
-import ProjectList from '@/components/projects/Projects';
-import ContactForm from '@/components/contactinfo/Contactform';
+import RenderList from '../components/socialicon';
+import Education from '../components/education/education';
+import Skills from '../components/skills/skills';
+import ProjectList from '../components/projects/Projects';
+import ContactForm from '../components/contactinfo/Contactform';
 import Hobby from '../components/hobby/hobby';
-import Headline from '@/components/headline/headline';
+import Headline from '../components/headline/headline';
 
 
 export default function Home() {

@@ -109,7 +109,7 @@ const BackgroundAnimation = () => {
             <div className="sphere">
 
                 <svg className="sphere" viewBox="0 0 580 580" stroke="rgba(80,80,80,.35)">
-                    <svg class="sphere" viewBox="0 0 440 440" stroke="rgba(80,80,80,.35)">
+                    <svg className="sphere" viewBox="0 0 440 440" stroke="rgba(80,80,80,.35)">
                         <defs>
                             <linearGradient id="sphereGradient" x1="5%" x2="5%" y1="0%" y2="15%">
                                 <stop stop-color="#373734" offset="0%" />

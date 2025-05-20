@@ -9,22 +9,26 @@ const socialMediaLinks = [
     { name: 'Twitter', icon: <Twitter />, url: 'https://twitter.com/dataminer_12' },
 ];
 
-
 const iconVariants = {
     hover: { scale: 1.5 },
 };
 
 const RenderList = () => {
-    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
+    const [isSmallScreen, setIsSmallScreen] = useState(false);
 
     useEffect(() => {
-        const handleResize = () => {
+        const checkScreenSize = () => {
             setIsSmallScreen(window.innerWidth <= 768);
         };
 
-        window.addEventListener("resize", handleResize);
+        // Check on mount
+        checkScreenSize();
+
+        // Add event listener
+        window.addEventListener("resize", checkScreenSize);
+
         return () => {
-            window.removeEventListener("resize", handleResize);
+            window.removeEventListener("resize", checkScreenSize);
         };
     }, []);
 
@@ -35,22 +39,20 @@ const RenderList = () => {
     return (
         <div className="fixed top-1/2 right-4 transform -translate-y-1/2 p-1 z-50 icon-container">
             <ul>
-                {!isSmallScreen &&
-                    socialMediaLinks.map((link, index) => (
-                        <motion.li
-                            key={index}
-                            className="mb-5"
-                            initial="initial"
-                            whileHover="hover"
-                            variants={iconVariants}
-                        >
-                            <a href={link.url} target="_blank" rel="noopener noreferrer">
-                                <div className="icon text-cyan-500 hover:text-cyan-100">
-                                    {link.icon}
-                                </div>
-                            </a>
-                        </motion.li>
-                    ))}
+                {socialMediaLinks.map((link, index) => (
+                    <motion.li
+                        key={index}
+                        className="mb-5"
+                        whileHover="hover"
+                        variants={iconVariants}
+                    >
+                        <a href={link.url} target="_blank" rel="noopener noreferrer">
+                            <div className="icon text-cyan-500 hover:text-cyan-100">
+                                {link.icon}
+                            </div>
+                        </a>
+                    </motion.li>
+                ))}
             </ul>
         </div>
     );
